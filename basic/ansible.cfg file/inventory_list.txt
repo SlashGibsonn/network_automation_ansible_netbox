@@ -1,0 +1,10 @@
+root@otto:~# ansible --list-hosts all
+[DEPRECATION WARNING]: The TRANSFORM_INVALID_GROUP_CHARS settings is set to allow bad characters in group names by default, this will change, but still be user configurable on 
+deprecation. This feature will be removed in version 2.10. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+[WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+  hosts (4):
+    R1
+    R2
+    S1
+    S2
+root@otto:~# 

@@ -1,0 +1,8 @@
+Ansible Ad Hoc commands:
+========================
+
+root@NetworkAutomation-1:~# ansible S1 -m raw -a "show version" -u david -k
+
+https://docs.ansible.com/ansible/2.9/user_guide/modules.html
+https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html
+https://docs.ansible.com/ansible/2.9/modules/raw_module.html#raw-module

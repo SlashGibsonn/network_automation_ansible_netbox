@@ -1,0 +1,17 @@
+
+[routers]
+R1 ansible_user=slash ansible_password=slash ansible_network_os=ios
+R2 ansible_user=slash ansible_password=slash ansible_network_os=ios
+R3 ansible_user=slash ansible_password=slash ansible_network_os=ios
+
+[switch]
+S1 ansible_user=slash ansible_password=slash ansible_network_os=ios
+S2 ansible_user=slash ansible_password=slash ansible_network_os=ios
+
+[ubuntu]
+PC1
+PC2
+
+[mikrotik]
+Mik1 ansible_user=admin ansible_password=slash ansible_network_os=routeros
+Mik2 ansible_user=admin ansible_password=slash ansible_network_os=routeros

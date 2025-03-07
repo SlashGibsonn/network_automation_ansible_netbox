@@ -1,0 +1,53 @@
+Sep 22 12:25:26.551 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 22 12:25:26.552 HYPERVISOR: Started on IP = localhost, TCP port = 56873.
+Sep 22 12:25:27.039 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 22 12:25:27.041 HYPERVISOR: exec_cmd: hypervisor working_dir D:\ansible\halo\project-files\dynamips 
+Sep 22 12:25:27.041 GENERAL: working_dir=D:\ansible\halo\project-files\dynamips
+Sep 22 12:25:27.042 HYPERVISOR: exec_cmd: hypervisor working_dir D:\ansible\halo\project-files\dynamips\abd83494-d65f-474a-bc97-ed1022da8c05 
+Sep 22 12:25:27.043 GENERAL: working_dir=D:\ansible\halo\project-files\dynamips\abd83494-d65f-474a-bc97-ed1022da8c05
+Sep 22 12:25:27.043 HYPERVISOR: exec_cmd: vm create R2 2 c7200 
+Sep 22 12:25:27.046 VM: VM R2 created.
+Sep 22 12:25:27.048 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5018 
+Sep 22 12:25:27.049 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+Sep 22 12:25:27.049 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:27.050 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+Sep 22 12:25:27.053 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Sep 22 12:25:27.055 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+Sep 22 12:25:27.056 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:27.057 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60189214 
+Sep 22 12:25:27.060 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/MARIO/GNS3/images/IOS/c7200-adventerprisek9-mz.152-4.M7.image 
+Sep 22 12:25:27.062 HYPERVISOR: exec_cmd: c7200 set_mac_addr R2 ca02.4144.0000 
+Sep 22 12:25:27.064 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+Sep 22 12:25:27.065 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+Sep 22 12:25:27.067 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:27.068 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 PA-FE-TX 
+Sep 22 12:25:27.069 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:27.070 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 PA-FE-TX 
+Sep 22 12:25:27.071 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:27.071 HYPERVISOR: exec_cmd: vm slot_add_binding R2 3 0 PA-2FE-TX 
+Sep 22 12:25:27.072 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:27.072 HYPERVISOR: exec_cmd: vm slot_add_binding R2 4 0 PA-8E 
+Sep 22 12:25:27.073 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:27.073 HYPERVISOR: exec_cmd: vm slot_add_binding R2 5 0 PA-GE 
+Sep 22 12:25:27.074 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:27.075 HYPERVISOR: exec_cmd: vm slot_add_binding R2 6 0 PA-GE 
+Sep 22 12:25:27.077 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5018 
+Sep 22 12:25:28.016 HYPERVISOR: exec_cmd: nio create_udp udp-4286590d-53da-478b-9806-82ddd592c030 10088 127.0.0.1 10089 
+Sep 22 12:25:28.303 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 2 0 udp-4286590d-53da-478b-9806-82ddd592c030 
+Sep 22 12:25:28.305 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:28.423 HYPERVISOR: exec_cmd: nio create_udp udp-51db5cad-a372-472d-b702-2769938e1067 10092 127.0.0.1 10093 
+Sep 22 12:25:28.428 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 3 0 udp-51db5cad-a372-472d-b702-2769938e1067 
+Sep 22 12:25:28.429 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:46.688 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:46.688 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 2 0 
+Sep 22 12:25:46.689 HYPERVISOR: exec_cmd: nio delete udp-4286590d-53da-478b-9806-82ddd592c030 
+Sep 22 12:25:46.851 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:46.852 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 3 0 
+Sep 22 12:25:47.008 HYPERVISOR: exec_cmd: nio delete udp-51db5cad-a372-472d-b702-2769938e1067 
+Sep 22 12:25:47.460 HYPERVISOR: exec_cmd: vm get_status R2 
+Sep 22 12:25:47.461 HYPERVISOR: exec_cmd: vm extract_config R2 
+Sep 22 12:25:47.461 HYPERVISOR: exec_cmd: vm delete R2 
+Sep 22 12:25:47.461 VM: VM R2 destroyed.
+Sep 22 12:25:47.462 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 22 12:25:47.821 HYPERVISOR: Stopped.
+Sep 22 12:25:47.821 GENERAL: reset done.

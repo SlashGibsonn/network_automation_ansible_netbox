@@ -1,0 +1,18 @@
+#
+# Ansible 2.9.6 (and older) still allows special characters in group names, but with a deprecation warning.
+# Special characters will not be allowed in Ansible 2.10 and later.
+# Consider renaming the group to remove the dash, and edit the playbook accordingly
+#
+# Use this with the ad-hoc commands, and the getarp1 and getmacaddress1 playbooks, as they use raw commands.
+# Including variables in here will prevent ad-hoc and those two playbooks from working
+#
+
+
+[gns3-core]
+S1
+S2
+
+[gns3-access]
+S3
+S4
+S5

@@ -1,0 +1,17 @@
+---
+- name: Manage GNS3 devices
+  hosts: gns3-ios
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+    - name: enable ospf
+      ios_config:
+        parents: router ospf 1
+        lines:
+          - network 0.0.0.0 255.255.255.255 area 0
+
+      register: print_output
+
+    -  debug: var=print_output
+

@@ -1,0 +1,28 @@
+---
+- name: testing commands
+  hosts: Mik1
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    - name: assign IP address to interface
+      routeros_command:
+        commands:
+          - /ip address add address=20.255.20.1/24 interface=ether2
+      register: ip_output
+
+    - name: configure OSPF
+      routeros_command:
+        commands:
+          - /routing ospf instance add name=v2inst version=2 router-id=1.0.0.1
+          - /routing ospf area add name=backbone_v2 area-id=0.0.0.0 instance=v2inst
+          - /routing ospf interface-template add networks=20.255.20.0/24 area=backbone_v2
+      register: ospf_output
+
+    - name: show IP configuration output
+      debug:
+        var: ip_output.stdout_lines
+
+    - name: show OSPF configuration output
+      debug:
+        var: ospf_output.stdout_lines

@@ -1,0 +1,42 @@
+#
+# Ansible 2.9.6 (and older) still allows special characters in group names, but with a deprecation warning.
+# Special characters will not be allowed in Ansible 2.10 and later.
+# Consider renaming the group to remove the dash, and edit the playbook accordingly
+#
+# Use this inventory file with the getver1, getver2, and getrun playbooks 
+#
+# Edit the following variables in the group vars section, based on the user/pass and enable secret you configured on your switches:
+# ansible_user=myuser   (user on the switch)
+# ansible_password=userpass  (above user's password)
+# ansible_become_password=enablepass  (the enable secret to get into privileged mode)
+#
+#
+#
+
+[gns3-core]
+S1
+S2
+
+[gns3-access]
+S3
+S4
+S5
+
+
+[gns3-core:vars]
+ansible_connection=network_cli
+ansible_network_os=ios
+ansible_user=david
+ansible_password=cisco
+ansible_become=yes
+ansible_become_method=enable
+ansible_become_password=cisco123
+
+[gns3-access:vars]
+ansible_connection=network_cli
+ansible_network_os=ios
+ansible_user=david
+ansible_password=cisco
+ansible_become=yes
+ansible_become_method=enable
+ansible_become_password=cisco123

@@ -1,0 +1,23 @@
+Ansible Ad Hoc commands:
+========================
+
+root@NetworkAutomation-1:~# ansible S1 -m raw -a "show version" -u david -k
+
+root@NetworkAutomation-1:~# ansible S1 -m raw -a "show run" -u david -k
+
+root@NetworkAutomation-1:~# ansible gns3-core -i ./gns3hosts -m raw -a "show version" -u david -k
+
+root@NetworkAutomation-1:~# ansible gns3-core -i ./gns3hosts -m raw -a "show version" -u david -k | grep flash0
+
+root@NetworkAutomation-1:~# ansible gns3-core -i ./gns3hosts -m raw -a "show version" -u david -k | grep 'SUCCESS\|Software'
+
+root@NetworkAutomation-1:~# ansible gns3-core -i ./gns3hosts -m raw -a "show version" -u david -k | grep 'SUCCESS\|Version'
+
+root@NetworkAutomation-1:~# ansible gns3-core -i ./gns3hosts -m raw -a "show run" -u david -k | grep 'username'
+
+root@NetworkAutomation-1:~# ansible gns3-core -i ./gns3hosts -m raw -a "show run" -u david -k | grep 'SUCCESS\|username'
+
+
+https://docs.ansible.com/ansible/2.9/user_guide/modules.html
+https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html
+https://docs.ansible.com/ansible/2.9/modules/raw_module.html#raw-module

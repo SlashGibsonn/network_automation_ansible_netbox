@@ -1,0 +1,122 @@
+myansible devices config commands examples:
+
+
+
+
+
+R1
+
+en
+conf t
+host R1
+line con 0
+logging sync
+exit     
+line vty 0 4
+transport input ssh
+login local
+exit
+ip domain-name cciepython.com
+username david pass cisco
+enable pass cisco123
+crypto key gen rsa mod 2048
+ip ssh ver 2
+int g0/0
+ip add 192.168.122.72 255.255.255.0
+no shut
+end
+wr
+
+
+
+
+R2
+
+
+en
+conf t
+host R2
+line con 0
+logging sync
+exit     
+line vty 0 4
+transport input ssh
+login local
+exit
+ip domain-name cciepython.com
+username david pass cisco
+enable pass cisco123
+crypto key gen rsa mod 2048
+ip ssh ver 2
+int g0/0
+ip add 192.168.122.73 255.255.255.0
+no shut
+end
+wr
+
+
+
+
+S1
+
+
+en
+conf t
+host S1
+line con 0
+logging sync
+exit
+line vty 0 4
+transport input ssh
+login local
+exit
+ip domain-name cciepython.com
+username david pass cisco
+enable pass cisco123
+crypto key gen rsa mod 2048
+ip ssh ver 2
+int vlan 1
+ip add 192.168.122.74 255.255.255.0
+no shut
+int g0/0
+switchport access vlan 1
+switchport mode access
+no shut
+end
+wr
+
+
+
+
+S2
+
+
+en
+conf t
+host S2
+line con 0
+logging sync
+exit
+line vty 0 4
+transport input ssh
+login local
+exit
+ip domain-name cciepython.com
+username david pass cisco
+enable pass cisco123
+crypto key gen rsa mod 2048
+ip ssh ver 2
+int vlan 1
+ip add 192.168.122.75 255.255.255.0
+no shut
+int g0/0
+switchport access vlan 1
+switchport mode access
+no shut
+end
+wr
+
+
+
+
+

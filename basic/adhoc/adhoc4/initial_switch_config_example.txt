@@ -1,0 +1,171 @@
+Initial Switch config commands for the ad-hoc examples:
+
+
+
+
+
+S1
+
+en
+conf t
+host S1
+line con 0
+logging sync
+exit
+line vty 0 4
+transport input ssh
+login local
+exit
+user david priv 15 pass cisco
+ip domain-name cciepython.com
+crypto key gen rsa mod 2048 
+ip ssh ver 2
+int vlan 1
+ip add 192.168.122.71 255.255.255.0
+no shut
+exit
+int range g0/0 - 2
+switchport trunk encap dot1q
+switchport mode trunk
+exit
+int g1/2
+switchport access vlan 1
+switchport mode access
+exit
+int range g1/0 - 1
+switchport trunk encap dot1q
+switchport mode trunk
+channel-group 1 mode active
+int po1
+switchport trunk encap dot1q
+switchport mode trunk
+no shut
+end
+wr mem
+
+
+
+S2
+
+en
+conf t
+host S2
+line con 0
+logging sync
+exit
+line vty 0 4
+transport input ssh
+login local
+exit
+user david priv 15 pass cisco
+ip domain-name cciepython.com
+crypto key gen rsa mod 2048 
+ip ssh ver 2
+int vlan 1
+ip add 192.168.122.72 255.255.255.0
+no shut
+exit
+int range g0/0 - 2
+switchport trunk encap dot1q
+switchport mode trunk
+exit
+int range g1/0 - 1
+switchport trunk encap dot1q
+switchport mode trunk
+channel-group 1 mode active
+int po1
+switchport trunk encap dot1q
+switchport mode trunk
+no shut
+end
+wr
+
+
+S3
+
+en
+conf t
+host S3
+line con 0
+logging sync
+exit
+line vty 0 4
+transport input ssh
+login local
+exit
+user david priv 15 pass cisco
+ip domain-name cciepython.com
+int range g0/0 - 1
+switchport trunk encap dot1q
+switchport mode trunk
+exit
+int vlan 1
+ip add 192.168.122.73 255.255.255.0
+no shut
+exit
+crypto key gen rsa mod 2048 
+ip ssh ver 2
+end
+wr
+
+
+
+
+
+S4
+
+en
+conf t
+host S4
+line con 0
+logging sync
+exit
+line vty 0 4
+transport input ssh
+login local
+exit
+user david priv 15 pass cisco
+ip domain-name cciepython.com
+int range g0/0 - 1
+switchport trunk encap dot1q
+switchport mode trunk
+exit
+int vlan 1
+ip add 192.168.122.74 255.255.255.0
+no shut
+exit 
+crypto key gen rsa mod 2048
+ip ssh ver 2
+end
+wr mem
+
+
+
+S5
+
+en
+conf t
+host S5
+line con 0
+logging sync
+exit
+line vty 0 4 
+transport input ssh
+login local
+exit
+user david priv 15 pass cisco
+ip domain-name cciepython.com
+int range g0/0 - 1
+switchport trunk encap dot1q
+switchport mode trunk
+exit
+int vlan 1
+ip add 192.168.122.75 255.255.255.0
+no shut
+exit
+crypto key gen rsa mod 2048
+ip ssh ver 2
+end
+wr mem
+
+

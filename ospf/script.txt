@@ -1,0 +1,44 @@
+curl -H "Authorization: Token b1a1ade5ce4882396cb059482740163cfe8c7462" http://10.242.25.109:8000/
+
+curl -H "Authorization: Token b1a1ade5ce4882396cb059482740163cfe8c7462" http://10.242.25.109:8000/api/dcim/devices/
+
+
+import requests
+
+# NetBox URL dan API token
+NETBOX_URL = 'http://10.242.25.109:8000/'
+TOKEN = b1a1ade5ce4882396cb059482740163cfe8c7462
+
+# ID dari perangkat R1 (ganti dengan ID perangkat R1 yang sebenarnya)
+device_id = 1  # Misalnya, ID perangkat R1 adalah 1
+
+# Custom field yang ingin ditambahkan (ansible_network_os dengan nilai ios)
+custom_field_data = {
+    "custom_fields": {
+        "ansible_network_os": "ios"
+    }
+}
+
+# Headers untuk NetBox API
+headers = {
+    'Authorization': f"Token {TOKEN}",
+    'Content-Type': 'application/json',
+}
+
+# Mengirim request untuk memperbarui custom field perangkat
+response = requests.patch(f"{NETBOX_URL}/dcim/devices/{device_id}/", json=custom_field_data, headers=headers)
+
+# Memeriksa status hasil request
+if response.status_code == 200:
+    print("Custom field 'ansible_network_os=ios' updated successfully on device R1.")
+else:
+    print(f"Failed to update custom field: {response.status_code} - {response.text}")
+
+=============
+
+curl -X PATCH -H "Authorization: Token b1a1ade5ce4882396cb059482740163cfe8c7462" \
+-H "Content-Type: application/json" \
+-d '{"custom_fields": {"ansible_network_os": "ios"}}' \
+http://10.242.25.109:8000/api/dcim/devices/2/
+
+

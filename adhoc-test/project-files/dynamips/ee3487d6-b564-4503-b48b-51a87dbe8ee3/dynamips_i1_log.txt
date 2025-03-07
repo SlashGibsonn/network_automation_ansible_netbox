@@ -1,0 +1,19 @@
+Sep 09 14:02:31.693 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 09 14:02:31.694 HYPERVISOR: Started on IP = localhost, TCP port = 38024.
+Sep 09 14:02:31.916 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 09 14:02:31.917 HYPERVISOR: exec_cmd: hypervisor working_dir D:\ansible\adhoc-test\project-files\dynamips 
+Sep 09 14:02:32.019 GENERAL: working_dir=D:\ansible\adhoc-test\project-files\dynamips
+Sep 09 14:02:32.019 HYPERVISOR: exec_cmd: ethsw create Switch1 
+Sep 09 14:02:34.365 HYPERVISOR: exec_cmd: nio create_udp udp-1b3b3dd7-a3c3-497b-a2dc-443a3a9ff655 10000 192.168.110.128 20000 
+Sep 09 14:02:34.366 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-1b3b3dd7-a3c3-497b-a2dc-443a3a9ff655 
+Sep 09 14:02:34.382 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-1b3b3dd7-a3c3-497b-a2dc-443a3a9ff655 1 
+Sep 09 14:02:35.964 HYPERVISOR: exec_cmd: nio create_udp udp-6b005d90-d6f4-40e5-891d-61062ea5979e 10029 127.0.0.1 10028 
+Sep 09 14:02:35.965 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-6b005d90-d6f4-40e5-891d-61062ea5979e 
+Sep 09 14:02:35.981 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-6b005d90-d6f4-40e5-891d-61062ea5979e 1 
+Sep 09 14:02:36.532 HYPERVISOR: exec_cmd: nio create_udp udp-ef23c612-0fbc-4dc2-bf40-f320056ed1b4 10061 127.0.0.1 10060 
+Sep 09 14:02:36.532 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-ef23c612-0fbc-4dc2-bf40-f320056ed1b4 
+Sep 09 14:02:36.535 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-ef23c612-0fbc-4dc2-bf40-f320056ed1b4 1 
+Sep 09 15:41:10.405 HYPERVISOR: exec_cmd: ethsw delete Switch1 
+Sep 09 15:41:10.486 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 09 15:41:10.593 HYPERVISOR: Stopped.
+Sep 09 15:41:10.593 GENERAL: reset done.

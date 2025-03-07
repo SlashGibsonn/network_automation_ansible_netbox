@@ -1,0 +1,10 @@
+#
+# While Ansible 2.9.6 still allows special characters (like dashes) in group names, that is deprecated in Ansible 2.10 and later
+# 
+
+
+[gns3-ios]
+R1
+R2
+S1
+S2

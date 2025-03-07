@@ -1,0 +1,20 @@
+Ansible Ad Hoc commands:
+========================
+
+root@NetworkAutomation-1:~# ansible all -i gns3hosts -m raw -a "show arp" -u david -k 
+
+root@NetworkAutomation-1:~# ansible all -i gns3hosts -m raw -a "show arp" -u david -k | grep 71
+
+root@NetworkAutomation-1:~# ansible all -i gns3hosts -m raw -a "show arp" -u david -k | grep 'CHANGED\|71'
+
+root@NetworkAutomation-1:~# ansible all -i gns3hosts -m raw -a "show arp" -u david -k | grep 'CHANGED\|\.71'
+
+root@NetworkAutomation-1:~# ansible all -i gns3hosts -m raw -a "show mac address-table" -u david -k 
+
+root@NetworkAutomation-1:~# ansible all -i gns3hosts -m raw -a "show mac address-table" -u david -k | grep 7a
+
+root@NetworkAutomation-1:~# ansible all -i gns3hosts -m raw -a "show mac address-table" -u david -k | grep 'CHANGED\|fe7a'
+
+https://docs.ansible.com/ansible/2.9/user_guide/modules.html
+https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html
+https://docs.ansible.com/ansible/2.9/modules/raw_module.html#raw-module
