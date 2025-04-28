@@ -1,3 +1,2 @@
-Kumpulan projek ansible pada GNS3. Beberapa dengan Netbox. 
+Projects on Network Automation using Ansible and Netbox as devices inventory. 
 
-Cisco + Mikrotik 
